@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/person-finder/static/css/main.4b820d40.chunk.css",
+    "main.js": "/person-finder/static/js/main.0aad7eb6.chunk.js",
+    "main.js.map": "/person-finder/static/js/main.0aad7eb6.chunk.js.map",
+    "runtime-main.js": "/person-finder/static/js/runtime-main.7544042d.js",
+    "runtime-main.js.map": "/person-finder/static/js/runtime-main.7544042d.js.map",
+    "static/js/2.1a9dfdf4.chunk.js": "/person-finder/static/js/2.1a9dfdf4.chunk.js",
+    "static/js/2.1a9dfdf4.chunk.js.map": "/person-finder/static/js/2.1a9dfdf4.chunk.js.map",
+    "index.html": "/person-finder/index.html",
+    "static/css/main.4b820d40.chunk.css.map": "/person-finder/static/css/main.4b820d40.chunk.css.map",
+    "static/js/2.1a9dfdf4.chunk.js.LICENSE.txt": "/person-finder/static/js/2.1a9dfdf4.chunk.js.LICENSE.txt",
+    "static/media/logo.2d33a1bb.svg": "/person-finder/static/media/logo.2d33a1bb.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7544042d.js",
+    "static/js/2.1a9dfdf4.chunk.js",
+    "static/css/main.4b820d40.chunk.css",
+    "static/js/main.0aad7eb6.chunk.js"
+  ]
+}
