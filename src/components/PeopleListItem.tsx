@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { FC } from 'react';
+import { FC, memo } from 'react';
 import { Person } from '../types';
 
 // TODO: improve performance by fetching "paginated" images
@@ -11,6 +11,7 @@ const AVATAR_SIZE = 96;
 const StyledListItem = styled.li`
   display: flex;
   margin-bottom: 24px;
+  ${({ hide}: {hide: boolean}) => hide ? `display: none`: ``}
 `;
 
 const StyledAvatar = styled.div`
@@ -70,12 +71,13 @@ const PersonInfo : FC<PersonInfoProps> = ({ name, description }) => (
 );
 
 type PeopleListItemProps = {
-  person: Person
+  person: Person,
+  hide: boolean
 };
 
-export const PeopleListItem : FC<PeopleListItemProps> = ({ person }) => (
-  <StyledListItem>
+export const PeopleListItem : FC<PeopleListItemProps> = memo(({ person, hide }) => (
+  <StyledListItem hide={hide}>
     <Avatar altText={person.name} imgUrl={person.avatar} />
     <PersonInfo name={person.name} description={person.description} />
   </StyledListItem>
-);
+));

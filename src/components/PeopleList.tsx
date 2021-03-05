@@ -11,18 +11,19 @@ type PeopleListProps = {
 };
 
 export const PeopleList : FC<PeopleListProps> = ({ people, searchString }) => {
-  const filteredPeople = people.filter((person) => {
-    return person.name.toLowerCase().includes(searchString.toLowerCase());
-  });
 
   return (
     <ul>
-      {filteredPeople.map((person) => (
-        <PeopleListItem
-          key={person.id}
-          person={person}
-        />
-      ))}
+      {people.map((person) => {
+        const shouldShow = searchString ? person.name.toLowerCase().includes(searchString.toLowerCase()): true;
+          return <PeopleListItem
+            key={person.id}
+            person={person}
+            hide={!shouldShow}
+          />
+      }
+      )
+      }
     </ul>
   );
 };
